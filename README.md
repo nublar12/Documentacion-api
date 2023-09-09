@@ -7,9 +7,8 @@ Esta API permite la subida de archivos y la gestión de transcripciones asociada
 Requisitos Previos
 Node.js y Express: Asegúrate de tener Node.js y Express instalados en tu entorno.
 Librerías:
-express
-multer
-path
+axios
+discord-html-transcripts
 fs
 moment
 Endpoints
