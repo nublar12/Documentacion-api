@@ -18,6 +18,7 @@ Descripción: Sube un archivo de transcripción.
 Parámetros:
 file: Archivo a subir.
 Ejemplo de Uso:
+
 // Ejemplo de código para subir un archivo usando Axios
 const formData = new FormData();
 formData.append('file', file, `${interaction.user.id}.html`);
@@ -40,6 +41,7 @@ Ejemplo de Uso:
 // https://nublar-transcript-api.squareweb.app/transcripts/mi_transcripcion.html
 
 Ejemplo de Código de Referencia
+
 if (customId === "cerrar") {
   // ... (código omitido para brevedad)
   const formData = new FormData();
