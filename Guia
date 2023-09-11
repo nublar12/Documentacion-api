@@ -13,8 +13,6 @@ Asegúrate de tener Node.js y Express instalados en tu entorno. Además, necesit
 - axios
 - discord-html-transcripts
 - fs
-- moment
-
 **Endpoints**
 
 **POST /upload**
