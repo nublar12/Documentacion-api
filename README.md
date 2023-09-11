@@ -1,57 +1,9 @@
-# Documentacion-api
-Un api para automatizar mas tus transcrips de discord.js
-Documentación de la API de Transcripción
-Introducción
-Esta API permite la subida de archivos y la gestión de transcripciones asociadas.
+# Documentación de la API de Transcripción
 
-Requisitos Previos
-Node.js y Express: Asegúrate de tener Node.js y Express instalados en tu entorno.
-Librerías:
-axios
-discord-html-transcripts
-fs
-moment
-Endpoints
-POST /upload
-Descripción: Sube un archivo de transcripción.
-Parámetros:
-file: Archivo a subir.
-Ejemplo de Uso:
+La API de Transcripción ofrece una solución eficaz para automatizar y gestionar transcripciones en Discord.js. Al proporcionar una interfaz para la subida de archivos y la manipulación de transcripciones asociadas, esta API simplifica el proceso de registro y almacenamiento de conversaciones en tus servidores de Discord.
 
-// Ejemplo de código para subir un archivo usando Axios
-const formData = new FormData();
-formData.append('file', file, `${interaction.user.id}.html`);
-axios.post('https://nublar-transcript-api.squareweb.app/upload', formData, {
-  headers: {
-    'Content-Type': 'multipart/form-data'
-  }
-}).then(response => {
-  // Manejo de la respuesta
-}).catch(error => {
-  // Manejo del error
-});
+Con el fin de utilizar esta API de manera efectiva, es esencial contar con un entorno configurado con Node.js y Express. Además, asegúrate de tener instaladas las siguientes librerías: axios, discord-html-transcripts, fs y moment. Estos componentes son fundamentales para el funcionamiento fluido de la API y permitirán una integración sin problemas en tu proyecto.
 
-GET /transcripts/:filename
-Descripción: Obtiene el archivo de transcripción por nombre de archivo.
-Parámetros:
-filename: Nombre del archivo de transcripción.
-Ejemplo de Uso:
-// Ejemplo de URL para obtener un archivo de transcripción
-// https://nublar-transcript-api.squareweb.app/transcripts/mi_transcripcion.html
+En esta documentación, encontrarás detalles precisos sobre los endpoints disponibles y cómo interactuar con ellos. El endpoint `POST /upload` te permite cargar archivos de transcripción, mientras que el endpoint `GET /transcripts/:filename` facilita la obtención de transcripciones mediante el nombre del archivo correspondiente.
 
-Ejemplo de Código de Referencia
-
-if (customId === "cerrar") {
-  // ... (código omitido para brevedad)
-  const formData = new FormData();
-  formData.append('file', file, `${interaction.user.id}.html`);
-  axios.post('https://nublar-transcript-api.squareweb.app/upload', formData, {
-    headers: {
-      'Content-Type': 'multipart/form-data'
-    }
-  }).then(response => {
-    // Manejo de la respuesta
-  }).catch(error => {
-    // Manejo del error
-  });
-}
+A lo largo de esta guía, se proporcionarán ejemplos de código para ilustrar cómo utilizar cada endpoint y aprovechar al máximo las capacidades de la API. Sigue las instrucciones detalladas para una implementación exitosa y disfruta de una experiencia de automatización de transcripciones más eficiente en tu aplicación Discord.js.
