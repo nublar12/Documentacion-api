@@ -1,0 +1,76 @@
+**Documentación de la API de Transcripción**
+
+Esta API está diseñada para facilitar la automatización de tus transcripciones en Discord.js.
+
+**Introducción**
+
+La API permite la carga de archivos y la gestión de transcripciones asociadas.
+
+**Requisitos Previos**
+
+Asegúrate de tener Node.js y Express instalados en tu entorno. Además, necesitarás las siguientes librerías:
+
+- axios
+- discord-html-transcripts
+- fs
+- moment
+
+**Endpoints**
+
+**POST /upload**
+
+*Descripción*: Sube un archivo de transcripción.
+
+*Parámetros*:
+
+- `file`: Archivo a subir.
+
+*Ejemplo de Uso*:
+
+```javascript
+// Ejemplo de código para subir un archivo usando Axios
+const formData = new FormData();
+formData.append('file', file, `${interaction.user.id}.html`);
+axios.post('https://nublar-transcript-api.squareweb.app/upload', formData, {
+  headers: {
+    'Content-Type': 'multipart/form-data'
+  }
+}).then(response => {
+  // Manejo de la respuesta
+}).catch(error => {
+  // Manejo del error
+});
+```
+
+**GET /transcripts/:filename**
+
+*Descripción*: Obtiene el archivo de transcripción por nombre de archivo.
+
+*Parámetros*:
+
+- `filename`: Nombre del archivo de transcripción.
+
+*Ejemplo de Uso*:
+
+```javascript
+// Ejemplo de URL para obtener un archivo de transcripción
+// https://nublar-transcript-api.squareweb.app/transcripts/mi_transcripcion.html
+```
+
+**Ejemplo de Código de Referencia**
+
+```javascript
+if (customId === "cerrar") {
+  // ... (código omitido para brevedad)
+  const formData = new FormData();
+  formData.append('file', file, `${interaction.user.id}.html`);
+  axios.post('https://nublar-transcript-api.squareweb.app/upload', formData, {
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    }
+  }).then(response => {
+    // Manejo de la respuesta
+  }).catch(error => {
+    // Manejo del error
+  });
+}
