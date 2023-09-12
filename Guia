@@ -29,7 +29,7 @@ Asegúrate de tener Node.js y Express instalados en tu entorno. Además, necesit
 // Ejemplo de código para subir un archivo usando Axios
 const formData = new FormData();
 formData.append('file', file, `${interaction.user.id}.html`);
-axios.post('https://nublar-transcript-api.squareweb.app/upload', formData, {
+axios.post('https://nublar.xyz/upload', formData, {
   headers: {
     'Content-Type': 'multipart/form-data'
   }
@@ -52,7 +52,7 @@ axios.post('https://nublar-transcript-api.squareweb.app/upload', formData, {
 
 ```javascript
 // Ejemplo de URL para obtener un archivo de transcripción
-// https://nublar-transcript-api.squareweb.app/transcripts/mi_transcripcion.html
+// https://nublar.xyz/transcripts/mi_transcripcion.html
 ```
 
 **Ejemplo de Código de Referencia**
@@ -62,7 +62,7 @@ if (customId === "cerrar") {
   // ... (código omitido para brevedad)
   const formData = new FormData();
   formData.append('file', file, `${interaction.user.id}.html`);
-  axios.post('https://nublar-transcript-api.squareweb.app/upload', formData, {
+  axios.post('https://nublar.xyz/upload', formData, {
     headers: {
       'Content-Type': 'multipart/form-data'
     }
